@@ -2,7 +2,7 @@ interface IExercise {
     description: string
     equipment: Equipment[]
     name: string
-    primaryMuscleGroup: Omit<MuscleGroup, 'Core'>
+    primaryMuscleGroup: MuscleGroup
     secondaryMuscleGroups: MuscleGroup[]
     tips?: string
 }
@@ -16,8 +16,10 @@ type Equipment = "Barbell" | "Dumbbells" | "Flat Bench" | "Incline Bench" | "Dec
     "Tricep Push Down Machine" | "Abdominal Machine" | "Glute Machine" | "Hip Abduction Machine" |
     "Hip Adduction Machine" | "Hip Flexion Machine" | "Hip Extension Machine" | "Hip Rotation Machine" |
     "Hip Thrust Machine" | "Leg Press Machine" | "Leg Extension Machine" | "Leg Curl Machine" |
-    "Loop Bands" | "Balance Trainer" | "Foam Roller" | "Plyo Box" | "Pull Up Bar"
+    "Loop Bands" | "Balance Trainer" | "Foam Roller" | "Plyo Box" | "Pull Up Bar" | "Ab Wheel" |
+    "Crunch Machine" | "Stability Ball" | "Glute Ham Developer" | "Handle Bands"
 
 type MuscleGroup = "Chest" | "Back" | "Shoulders" | "Front Shoulders" | "Biceps" | "Triceps" | "Forearms" |
     "Abs" | "Glutes" | "Quads" | "Hamstrings" | "Calves" | "Traps" | "Lats" | "Middle Back" | "Lower Back" |
-    "Upper Back" | "Core" | "Neck" | "Lower Body" | "Upper Body" | "Full Body"
+    "Upper Back" | "Core" | "Neck" | "Lower Body" | "Upper Body" | "Full Body" | "Hip Abductors" |
+    "Hip Adductors" | "Hip Flexors" | "Obliques"

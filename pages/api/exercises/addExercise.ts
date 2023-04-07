@@ -4,52 +4,32 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 const exercises: IExercise[] = [
     {
-        "name": "Balance Trainer Push Up",
-        "description": "1. Place your hands on the outer edges of the balance trainer with your arms extended and your body in a straight line from head to heels. 2. Lower your body until your chest touches the balance trainer. 3. Push back up to the starting position. 4. Repeat for the desired number of repetitions. ",
-        "primaryMuscleGroup": "Chest",
-        "secondaryMuscleGroups": [
-            "Triceps",
-            "Shoulders"
-        ],
-        "equipment": [
-            "Balance Trainer"
-        ]
+        "name": "Handle Band Crunch",
+        "primaryMuscleGroup": "Abs",
+        "secondaryMuscleGroups": ["Obliques"],
+        "description": "1. Attach handle band to a stable anchor point and hold it with both hands. 2. Kneel facing away from the anchor point and extend your arms above your head. 3. Tighten your core and bend at the waist, lowering your upper body until your hands are at your knees. 4. Slowly return to the starting position and repeat.",
+        "equipment": ["Handle Bands"]
     },
     {
-        "name": "Balance Trainer Incline Push Up",
-        "description": "1. Place your hands on the balance trainer with your arms extended and your body at an angle. 2. Lower your body until your chest touches the balance trainer. 3. Push back up to the starting position. 4. Repeat for the desired number of repetitions. ",
-        "primaryMuscleGroup": "Upper Chest",
-        "secondaryMuscleGroups": [
-            "Triceps",
-            "Shoulders"
-        ],
-        "equipment": [
-            "Balance Trainer"
-        ]
+        "name": "Hanging Knee Raise",
+        "primaryMuscleGroup": "Abs",
+        "secondaryMuscleGroups": ["Hip Flexors"],
+        "description": "1. Hang from a pull-up bar with your palms facing away from your body and your feet off the ground. 2. Tighten your core and lift your knees up towards your chest. 3. Hold for a moment, then slowly lower your legs back down to the starting position. 4. Repeat.",
+        "equipment": ["Pull Up Bar"]
     },
     {
-        "name": "Balance Trainer Tricep Push Up",
-        "description": "1. Place your hands close together on the balance trainer with your arms extended and your body in a straight line from head to heels. 2. Lower your body until your chest touches the balance trainer. 3. Push back up to the starting position. 4. Repeat for the desired number of repetitions. ",
-        "primaryMuscleGroup": "Triceps",
-        "secondaryMuscleGroups": [
-            "Chest",
-            "Shoulders"
-        ],
-        "equipment": [
-            "Balance Trainer"
-        ]
+        "name": "Hanging Leg Raise",
+        "primaryMuscleGroup": "Abs",
+        "secondaryMuscleGroups": ["Hip Flexors"],
+        "description": "1. Hang from a pull-up bar with your palms facing away from your body and your feet off the ground. 2. Tighten your core and lift your legs up until they are parallel to the ground. 3. Hold for a moment, then slowly lower your legs back down to the starting position. 4. Repeat.",
+        "equipment": ["Pull Up Bar"]
     },
     {
-        "name": "Balance Trainer Decline Push Up",
-        "description": "1. Place your feet on the balance trainer and your hands on the floor with your arms extended and your body in a straight line from head to heels. 2. Lower your body until your chest touches the floor. 3. Push back up to the starting position. 4. Repeat for the desired number of repetitions. ",
-        "primaryMuscleGroup": "Lower Chest",
-        "secondaryMuscleGroups": [
-            "Triceps",
-            "Shoulders"
-        ],
-        "equipment": [
-            "Balance Trainer"
-        ]
+        "name": "Hanging Oblique Knee Raise",
+        "primaryMuscleGroup": "Abs",
+        "secondaryMuscleGroups": ["Obliques", "Hip Flexors"],
+        "description": "1. Hang from a pull-up bar with your palms facing away from your body and your feet off the ground. 2. Tighten your core and lift your knees up towards your chest, twisting your torso to bring your knees towards your opposite elbow. 3. Hold for a moment, then slowly lower your legs back down to the starting position. 4. Repeat on the other side.",
+        "equipment": ["Pull Up Bar"]
     }
 ]
 

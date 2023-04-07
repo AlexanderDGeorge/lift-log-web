@@ -1,5 +1,5 @@
 import { firestoreDatabase } from '@/firebase/config'
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(
@@ -7,7 +7,8 @@ export default async function handler(
     res: NextApiResponse<IExercise[]>
 ) {
     const exercisesRef = collection(firestoreDatabase, 'exercises')
-    const exercisesSnap = await getDocs(exercisesRef)
+    const exercisesQuery = query(exercisesRef, orderBy('name'))
+    const exercisesSnap = await getDocs(exercisesQuery)
 
     res.status(200).json(exercisesSnap.docs.map(doc => doc.data() as IExercise))
 }
