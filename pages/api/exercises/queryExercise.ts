@@ -22,5 +22,11 @@ export default async function handler(
     const exercisesQuery = query(exercisesRef, ...queries)
     const exercisesSnap = await getDocs(exercisesQuery)
 
-    res.status(200).json({ query: req.query, exercisesSnap: exercisesSnap.docs.map(doc => doc.data()) })
+    res.status(200).json({
+        query: req.query,
+        exercises: exercisesSnap.docs.map(doc => ({
+            id: doc.id,
+            ...doc.data()
+        }))
+    })
 }
